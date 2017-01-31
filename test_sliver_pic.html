@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var d = document.getElementById("bloc");
+				var sli_left = document.getElementById("start");
+				var sli_right = document.getElementById("end");
+				var positionRe = 0;
+				var timer=null;
+				var fre=10;
+				sli_left.onclick=function(){
+					clearInterval(timer);
+					timer = setInterval(a,fre);
+					function a(){
+						positionRe = d.offsetLeft;
+						var speed = (300-positionRe)/15;
+						speed = speed<1 ? 1:speed;
+						if(positionRe==300){
+							clearInterval(timer);
+							return;
+						}
+						d.style.left=positionRe+speed+"px";
+					}
+				}
+				sli_right.onclick=function(){
+					clearInterval(timer);
+					timer = setInterval(a,fre);
+					function a(){
+						positionRe = d.offsetLeft;
+						var speed=-(positionRe)/15;
+						speed = speed>-1 ? -1:speed;
+						if(positionRe==0){
+							clearInterval(timer);
+							return;
+						}
+						d.style.left=positionRe+speed+"px";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" name="start" id="start" value="右移" />
+		<input type="button" name="end" id="end" value="左移" />
+		<div  id="bloc" style="position: absolute; width: 100px;height: 100px; background-color:brown ;">
+			
+		</div>
+	</body>
+</html>

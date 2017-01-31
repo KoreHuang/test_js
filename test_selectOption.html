@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var citys={
+				"sx" : ["西安市","宝鸡市","渭南市","铜川市","安康市","商洛市"],
+				"sc" : ["成都市","内江市","都江堰"],
+				"sd" : ["菏泽市","济南市","潍坊市","青岛市"]
+			};
+			var city = null;
+			window.onload = function(){
+				var pro = document.getElementById("pro");
+				var ord = document.getElementById("ord");
+				pro.onchange = function(){
+					switch(this.value){
+						case "1" : city = "";break;
+						case "2" : city = citys.sx; break;
+						case "3" : city = citys.sd;break;
+						case "4" : city = citys.sc;break;
+					}
+					var ordChildren = ord.children;
+					for(var i=ordChildren.length-1;i>=0;i--){
+						ord.removeChild(ordChildren[i]);
+					}
+					for(var i=0;i<city.length;i++){
+						var n_opt = document.createElement("option");
+						//						alert(city.length);
+						//						alert(city[i]);
+						n_opt.innerText = city[i];
+						ord.appendChild(n_opt);
+					}
+					
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+			<select name="" id="pro">
+				<option value="1">---请选择---</option>
+				<option value="2">陕西省</option>
+				<option value="3">山东省</option>
+				<option value="4">四川省</option>
+			</select>
+			<select id="ord">
+			</select>
+	</body>
+</html>

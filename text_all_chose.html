@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var all_cho = document.getElementById("all_cho");
+				var dform =  document.getElementById("Cform");
+				var greens = dform.getElementsByTagName("input");
+				all_cho.onclick=function(){
+					for(var i=1;i<greens.length;i++){
+						greens[i].checked = this.checked;
+					}
+				}
+				for(var i=1;i<greens.length;i++){
+					greens[i].onclick = function(){
+						if(!this.checked) { all_cho.checked=false; return; }
+						else{
+							var j=1;
+							for( j=1;j<greens.length&&greens[j].checked  ;j++);
+							if(j==greens.length) all_cho.checked=true;						
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="Cform">
+			<input type="checkbox" id="all_cho"  />全选／全不选<br />
+			<input type="checkbox" name="greens" />宫保鸡丁<br />
+			<input type="checkbox"  name="greens" />鱼香肉丝<br />
+			<input type="checkbox"  name="greens" />鱼香茄子<br />
+			<input type="checkbox"  name="greens" />农家小炒肉<br />
+			<input type="checkbox"  name="greens" />小鸡炖蘑菇<br />
+			<input type="checkbox"  name="greens" />小黄鱼<br />
+			<input type="checkbox"  name="greens"/>大盘鸡<br />
+		</div>
+	</body>
+</html>

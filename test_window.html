@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//alert(Math.random());
+			document.write("I'm fine thank you<br/>");
+			//window.location.href="https://www.baidu.com";
+			//window.location.reload();
+			//window.open("https://www.qq.com");
+//			function a(){
+//				alert("load over");
+//			}
+//			window.onload=a;		//整个页面加载完成之后，调用函数 		a()
+//			if(confirm("quedinglikai?")){
+//				alert("get out");
+//			};
+			window.onload = function(){
+				
+				var inputMoiv =	document.getElementById("ip");
+	 			alert(inputMoiv.value);
+				inputMoiv.value="雪山飞虎";
+			}
+			
+		</script>
+	</head>
+	<body>
+		<!--<iframe src="https://www.baidu.com" width="300px" height="250px"></iframe>-->
+		<input id="ip" type="text" name="sah" id="sah" value="千与千寻" />
+	</body>
+</html>

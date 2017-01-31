@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.onmousemove = function(e){
+				var ev = e||window.event;
+				var div = document.createElement("div");
+				div.style.height = "3px";
+				div.style.width = "3px";
+				div.style.background = "blueviolet";
+				div.style.position = "absolute";
+				div.style.left = ev.clientX+"px";
+				div.style.top = ev.clientY+"px";
+				document.body.appendChild(div);
+			}//	鼠标移动，调用函数
+			
+			document.onkeypress = function(){
+				
+			}// 下按键值， 调用函数
+		</script>
+	</body>
+</html>

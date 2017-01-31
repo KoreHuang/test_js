@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var a;
+//			a=1+'a';
+//			alert(a);
+//			var b='6';
+//			a=3;
+//			alert(a-b);
+//			alert(a/b);
+		function b(){
+			alert('b');
+		}
+		var a=function(){
+			var sum=0;
+			for(var i=0;i<arguments.length;i++){
+				sum=sum+arguments[i];
+			}
+			return sum;
+		}
+		function f(){
+			var sum=0;
+			for(var i=0;i<arguments.length;i++){
+				sum=sum+arguments[i];
+			}
+			return sum;
+		}
+		var c=f(1,2,3,4);
+		alert(c);
+		b();
+		var d = 1,f = '1';
+		alert(d==f);
+		alert(d===f)
+		d=a(1,2,3);
+		alert(d);
+		
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://qiyukf.com/script/8099365b1d24cb870b4f2a1db1beb175.js" defer async></script>
+	</head>
+	<body>
+		<input type="text" name="inputValue" id="inputValue" value="hello,world!" />
+		<input type="button" name="bt" id="bt" value="检验" />
+		<script type="text/javascript">
+			var bt=document.getElementById("bt");
+			bt.onclick = function(){
+				var inputText=document.getElementById("inputValue");
+				var reg=/\d+/g; 
+				var text =inputText.value;
+				var match,resault=[],i=0,tag = false;
+				while((match = reg.exec(text))!=null){
+					resault[i]=match[0];
+					document.write("字符串："+match.input+"   中,第"+(++i)+"个数字是:"+match[0]+" 它的起始位置是"+match.index+"<br/>");
+					tag = true;
+				}
+				if(!tag){
+					document.write("你输入的字符串没有数字!");
+				}
+				console.log(resault);
+			}
+			
+		var unixtime=1358932051;
+		var unixTimeStamp=new Date(unixtime*1000)
+		commtime=unixTimeStamp.toLocaleString();
+		//alert(commtime);
+			
+			
+			
+		</script>
+	</body>
+</html>

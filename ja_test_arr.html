@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var c=[];
+			for(var i=0;i<10;i++){
+				c[i]=10-i;
+			}
+			alert(c);
+			c[24]=250;
+			alert(c.length);
+			c.push(25);	//push-pop实现栈
+			alert(c);
+			var d=c.pop();
+			alert(d+""+c);
+			c.unshift(44);	//unshift() 在数组最开始添加一个元素
+			alert(c)
+			d=c.shift();		//push(),shift()实现队列
+			alert(d+""+c);
+		</script>
+	</body>
+</html>

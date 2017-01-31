@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function get (arr){
+             var arr1=arr.split('');
+             var arr2=[];
+             for(var i=0;i<arr1.length;i++){
+                var num='';
+                 if(arr1[i]>=0&&arr1[i]<=9){
+                    num=arr1[i];
+                    for(j=i+1;j<arr1.length;j++){
+                        if(arr1[j]>=0&&arr1[j]<=9){
+                            num+=arr1[j];
+                        }else{
+                           break;
+                       }
+                    }
+                    i=j;
+                    arr2.push(num);
+                 }
+             }
+             alert(arr2);
+          }
+          get('m12n34vd');
+		</script>
+	</body>
+</html>

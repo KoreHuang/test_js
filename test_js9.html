@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.calcu{margin: 0 auto;border: 1px solid red;text-align: center;}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var equal=document.getElementById("equal");
+				equal.onclick=function(){
+					var value1 = document.getElementById("value1");
+					var value2 = document.getElementById("value2");
+					var punc = document.getElementById("punc");
+					var result = document.getElementById("result")
+					value1 =	 parseInt(value1.value);
+					value2 = parseInt(value2.value);
+					switch(punc.value){
+						case '+':result.value=value1+value2; break;
+						case '-':result.value=value1-value2; break;
+						case '*':result.value=value1*value2; break;
+						case '/':if(value2 == 0) {alert("除数不能为零!");result.value=NaN;break;} result.value=value1/value2; break;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="calcu">
+			计算器<br />
+			
+			<input  type="text" name="value1" id="value1" value="" style="text-align: center; display: inline-block;" />
+			<input  type="text" name="punc" id="punc" value="" style="width: 20px; text-align: center;display: inline-block;"/>
+			<input  type="text" name="value2" id="value2" value="" style="text-align: center;display: inline-block;" />
+			<input type="button" name="equal" id="equal" value="=" style="width: 20px;display: inline-block;"/>
+			<input type="text" name="result" id="result" value="" style="text-align: center;display: inline-block;" />
+		</div>
+		
+		
+	</body>
+</html>
